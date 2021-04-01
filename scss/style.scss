@@ -1,7 +1,84 @@
-$color-main: rgb(191, 252, 49);
+@import "normalize.scss";
 
-body{
-    background-color: $color-main;
-    color: blue;
-    margin-top: 100px;
+@mixin font-lato {
+    font-family: "Lato", sans-serif;
 }
+
+@mixin open-sans {
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.section-outer {
+}
+.section-inner {
+}
+
+// === header ===
+.section-header {
+    &-wrapper {
+        background-color: #ffffff;
+        height: 94px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &-logo {
+            margin-left: 265px;
+            width: 50px;
+            height: 48px;
+            background-image: url("../img/logo.png");
+        }
+        &__menu {
+            margin-left: 50px;
+            &-button {
+                color: #868686;
+                font-size: 14px;
+                @include font-lato;
+                background-color: #ffffff;
+                border: none;
+            }
+        }
+    }
+}
+
+// === / header ===
+
+// === banner ===
+.section-banner{
+    &-wrapper{
+        width: 100%;
+        height: 690px;
+        background-image: url('../img/banner.png');
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-text{
+            &__title{
+                text-align: center;
+                @include open-sans();
+            }
+            &__subtitle{
+
+            }
+        }
+        &-menu{
+            &__input{
+
+            }
+            &__button{
+
+            }
+        }
+        &-laptop{
+
+        }
+        &-slider{
+            &__checkbox{
+
+            }
+        }
+    }
+}
+// === / banner ===
