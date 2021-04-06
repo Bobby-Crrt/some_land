@@ -9,6 +9,7 @@
     
 }
 
+
 .section-outer {
 }
 .section-inner {
@@ -17,6 +18,7 @@
 // === header ===
 .section-header {
     &-wrapper {
+        position: fixed;
         background-color: #ffffff;
         height: 94px;
         width: 100%;
@@ -41,14 +43,14 @@
         }
     }
 }
-
 // === / header ===
 
 // === banner ===
 .section-banner{
     &-wrapper{
+        padding-top: 94px;
         width: 100%;
-        height: 690px;
+        height: calc(100vh - 94px);
         background-image: url('../img/banner.png');
         background-repeat: no-repeat;
         display: flex;
@@ -71,7 +73,7 @@
         &-menu{
             height: 47px;
             margin-top: 50px;
-
+            @include open-sans;
 
             &__input{
                 box-sizing: border-box;
@@ -86,6 +88,8 @@
                 width: 212px;
                 height: 47px;
                 border-radius: 2px;
+                background-color: #ffbb42;
+                color: #ffffff;
             }
         }
         &-laptop{
@@ -94,14 +98,57 @@
             height: 343px;
             background-image: url('../img/laptop.png');
             &__content{
-                
+                width: 446px;
+                height: 265px;
+                margin-left: 101px;
+                margin-top: 17px;
             }
         }
         &-slider{
             &__radio{
                 margin-top: 20px;
+                
             }
         }
     }
 }
 // === / banner ===
+
+// === service ===
+.section-service{
+    &-wrapper{
+        &-text{
+            text-align: center;
+            &__title{
+
+            }
+            &__subtitle{
+
+            }
+        }
+        &-points{
+            display: flex;
+            flex-direction: row;
+            &-left{
+                display: flex;
+                flex-direction: column;
+            }
+            &-right{
+                display: flex;
+                flex-direction: column;
+            }
+            &-point{
+                &__icon{
+
+                }
+                &__title{
+
+                }
+                &__subtitle{
+
+                }
+            }
+        }
+    }
+}
+// === / service ===
